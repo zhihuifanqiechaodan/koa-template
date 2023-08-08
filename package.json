@@ -5,8 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "nodemon src/main.js",
-    "dev:localhost": "nodemon NODE_ENV=localhost src/main.js",
-    "dev:production": "nodemon NODE_ENV=production src/main.js",
+    "dev:localhost": "NODE_ENV=localhost nodemon src/main.js",
+    "dev:production": "NODE_ENV=production nodemon src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

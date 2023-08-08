@@ -8,6 +8,7 @@ import koaStatic from 'koa-static';
 import koaHelmet from 'koa-helmet';
 
 import errHandler from './middleware/err-handler.js';
+import requestLog from './middleware/request-log.js';
 import router from './router/index.js';
 import { log4jsInfo } from './utils/lo4js.js';
 
@@ -18,6 +19,7 @@ app
   .use(koa2Cors())
   .use(koaBody({ multipart: true }))
   .use(koaStatic(path.resolve(process.cwd(), 'src/assets')))
+  .use(requestLog)
   .use(router.routes())
   .use(router.allowedMethods())
   .on('error', errHandler)
