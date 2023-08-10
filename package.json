@@ -46,5 +46,8 @@
       "prettier --write"
     ]
   },
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  }
 }
